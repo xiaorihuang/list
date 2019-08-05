@@ -1,0 +1,45 @@
+// 把像素转换成 rem
+@function rem($px) {
+    @return $px/75 *1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: rem(360);
+    text-align: center;
+
+    li {
+        display: flex;
+        align-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 20%;
+
+        img {
+            width: rem(80);
+            height: rem(80);
+        }
+
+        p {
+            width: 100%;
+            font-size: rem(25);
+            color: #333;
+            padding-top: rem(8);
+
+        }
+    }
+}
